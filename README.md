@@ -67,6 +67,7 @@ Execute the binary _hello_
     $ ./hello 
 
 or
+
     $ ./hello.exe
 
 Expected output:
