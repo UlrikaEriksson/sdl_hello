@@ -30,7 +30,7 @@ To install the SDL2 libraries follow the instructions as per the operating syste
 
 On Ubuntu linux, use the following command in the terminal to install the required libraries:
 
-    $ sudo apt install -y libsdl2-2.0-0 libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-ttf-2.0-0 libsdl2-net-2.0-0
+    $ sudo apt install -y libsdl2-2.0-0 libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-ttf-2.0-0 libsdl2-net-2.0-0 libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libsdl2-net-dev libsdl2-mixer-dev
 
 ### SDL2 on Macos
 
