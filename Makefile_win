@@ -18,6 +18,7 @@ CFLAGS = -g -c
 #LIBS = C:\msys64\mingw64\lib
 
 # Extra flags to give to compilers when they are supposed to invoke the linker
+# NOTE ORDER OF THE FLAGS MATTERS!
 LDFLAGS = -lmingw32 -lSDL2main -lSDL2 -mwindows
 
 hello:
@@ -27,3 +28,4 @@ hello:
 
 clean:
 	rm hello
+	rm hello.o

@@ -24,4 +24,5 @@ hello:
 	$(CC) hello.o -o hello $(LDFLAGS) -L $(LIBS)
 
 clean:
+	rm -f hello.o
 	rm -f hello
