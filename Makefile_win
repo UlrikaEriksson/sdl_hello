@@ -26,6 +26,4 @@ hello:
 	$(CC) hello.o -o hello $(LDFLAGS)
 
 clean:
-	rm -f *.o
-	rm -f a.out
-	rm -f main
+	rm hello
