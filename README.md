@@ -50,7 +50,7 @@ Answer _Y_ to proceed with the installation.
 
 In order to run the program using Makefile, rename the right makefile for you system. For example, on a Windows computer, rename _Makefile\_win_ to _Makefile_. 
 
-Open a terminal and point the working directory to the project folder. Refer to the _c\_programming\_intro_ for details for your operating system.
+Open a terminal and point the working directory to the project folder. Refer to the [_c\_programming\_intro_](https://github.com/Makerspace-KTH/c_programing_intro#4-launch-and-run-a-c-program) for details for your operating system.
 
 Run the makefile based on your OS to build the _hello_ executable
 
