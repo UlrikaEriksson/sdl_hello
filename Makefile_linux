@@ -16,12 +16,18 @@ CFLAGS = -g -c
 
 # Extra flags to give to compilers when they are supposed to invoke the linker
 #LDFLAGS = -lmingw32 -lSDL2main -lSDL2 -mwindows
-LDFLAGS = -lSDL2main -lSDL2
+# LDFLAGS = -lSDL2main -lSDL2
+
+## SDL 3
+## Note: No -lSDL3main flag needed for SDL3, it is included in -lSDL3 as a header (see hello.c file).
+LDFLAGS = -lSDL3 
+
 
 hello:
 	@echo "Building Hello"
-	$(CC) $(CFLAGS) $(SRCDIR)/hello.c -o $@.o 
-#	$(CC) hello.o -o hello $(LDFLAGS) -L $(LIBS)
+	$(CC) $(CFLAGS) $(SRCDIR)/hello_sdl3.c -o $@.o 
+#	$(CC) $(CFLAGS) $(SRCDIR)/hello.c -o $@.o  # SDL2
+##	$(CC) hello.o -o hello $(LDFLAGS) -L $(LIBS)
 	$(CC) hello.o -o hello $(LDFLAGS) 
 
 clean:

@@ -18,31 +18,63 @@ To summarize, the tutorial assumes that:
 2. You have installed GNU C compiler (GCC) using the method described in the tutorial for your operating system. 
 3. You are able able to successfully compile the a program using make.
 
-A program with SDL2 libraries will not only require you to include and call the functions in the SDL2 library but also to provide the runtime libraries during the _linking_ process. The following sections describe how to install a SDL2 library and to tell the compiler to use it and link your program against it, to create the executable that can be run on your machine.
+A program with SDL libraries will not only require you to include and call the functions in the SDL2 library but also to provide the runtime libraries during the _linking_ process. The following sections describe how to install a SDL library and to tell the compiler to use it and link your program against it, to create the executable that can be run on your machine.
 
-## Installing SDL2 Libraries
 
-SDL2 contains various libraries based on what type of functions are called. For example, the _SDL2\_mixer_ library contains functions to manage sound when creating games, while _SDL2\_ttf_ library helps in creating fonts. The libraries are separated based on their functions but also to ensure that only the required parts of the libraries are used for building the executable. The size of the library will have a influence on the size of the executable cerated.
+## Installing SDL3 Libraries
+SDL3 contains various libraries based on what type of functions are called. For example, the _SDL2\_mixer_ library contains functions to manage sound when creating games, while _SDL2\_ttf_ library helps in creating fonts. The libraries are separated based on their functions but also to ensure that only the required parts of the libraries are used for building the executable. The size of the library will have a influence on the size of the executable cerated.
 
-To install the SDL2 libraries follow the instructions as per the operating system:
+### SDL3 on Ubuntu Linux
 
-### Ubuntu Linux
+SDL3 is a very new release and has still not entered into package management in Ubuntu Linux. It will be installed by compiling the same. 
 
 On Ubuntu linux, use the following command in the terminal to install the required libraries:
 
-    $ sudo apt install -y libsdl2-2.0-0 libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-ttf-2.0-0 libsdl2-net-2.0-0 libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev libsdl2-net-dev libsdl2-mixer-dev
+#### 1. Install CMake
+    $ sudo apt-get update
+    $ sudo apt-get install build-essential
+    $ sudo apt-get install cmake
+    
 
-### SDL2 on Macos
+#### 2. Download SDL3 from here: [SDL3-3.2.8.tar.gz](https://github.com/libsdl-org/SDL/releases/download/release-3.2.8/SDL3-3.2.8.tar.gz)
+
+#### 3. Extract the archive and compile
+Open a terminal and go to Downloads folder
+    $ cd ~/Downloads
+
+Extract the downloaded file.
+    $ tar -xf SDL3-3.2.4.tar.gz
+
+ Go to the extracted archive : for example I have the archive in the downloads directory : 
+    $ cd ~/Downloads/SDL3-3.2.4 
+
+#### 4. Compile SDL3 and install
+Issue the following commands:
+
+```bash
+mkdir build
+cd build
+ccmake ..
+type c for configure
+type c again
+type g for generate
+make
+sudo make install
+```
+This will install _sdl3_ into the standard library on your distribution.
+
+### SDL3 on Macos
 
 On mac with _homebrew_ installed please use the following command in terminal to install the libraries:
 
-    $ brew install sdl2 sdl2_mixer sdl2_image sdl2_ttf sdl2_net
+    $ brew install sdl3 sdl2_mixer sdl3_image sdl3_ttf sdl2_net
 
-### SDL2 on Windows
+
+### SDL3 on Windows
 
 On widows with Msys2, please open the msys2 console and issue the following commands to install the SDL2 libraries.
 
-    $ pacman -S mingw64/mingw-w64-x86_64-SDL2 mingw64/mingw-w64-x86_64-SDL2_image mingw64/mingw-w64-x86_64-SDL2_ttf mingw64/mingw-w64-x86_64-SDL2_mixer mingw64/mingw-w64-x86_64-SDL2_net
+    $ pacman -S mingw64/mingw-w64-x86_64-SDL3 mingw64/mingw-w64-x86_64-SDL3-image mingw64/mingw-w64-x86_64-SDL3-ttf mingw64/mingw-w64-x86_64-SDL2_mixer mingw64/mingw-w64-x86_64-SDL2_net
 
 Answer _Y_ to proceed with the installation.
 
