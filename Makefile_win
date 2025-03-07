@@ -29,7 +29,7 @@ LDFLAGS = -lmingw32 -lSDL3 -mwindows
 
 hello:
 	@echo "Building Hello"
-#	$(CC) $(CFLAGS) $(SRCDIR)/hello.c -o $@.o  # UNCOMMENT TO USE SDL2
+#	$(CC) $(CFLAGS) $(SRCDIR)/hello_sdl2.c -o $@.o  # UNCOMMENT TO USE SDL2
 	$(CC) $(CFLAGS) $(SRCDIR)/hello_sdl3.c -o $@.o 
 	$(CC) hello.o -o hello $(LDFLAGS)
 

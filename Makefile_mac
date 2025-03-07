@@ -27,8 +27,8 @@ LDFLAGS = -lSDL3
 
 hello:
 	@echo "Building Hello"
+#	$(CC) $(CFLAGS) $(SRCDIR)/hello_sdl2.c -o $@.o # UNCOMMENT TO USE SDL2
 	$(CC) $(CFLAGS) $(SRCDIR)/hello_sdl3.c -o $@.o 
-#	$(CC) $(CFLAGS) $(SRCDIR)/hello.c -o $@.o #SDL2 # UNCOMMENT TO USE SDL2
 	$(CC) hello.o -o hello $(LDFLAGS) -L $(LIBS)
 
 clean:
