@@ -52,7 +52,7 @@ Answer _Y_ to proceed with the installation.
 ## Installing SDL3 Libraries
 SDL contains various libraries based on what type of functions are called. For example, the _SDL2\_mixer_ library contains functions to manage sound when creating games, while _SDL2\_ttf_ library helps in creating fonts. The libraries are separated based on their functions but also to ensure that only the required parts of the libraries are used for building the executable. The size of the library will have a influence on the size of the executable cerated.
 
-For SDL3 in particular, not all libraries have been updated to an official 3.0 release. As a result, some packages in the instructions below are still version 2 releases. These versions remain compatible with the SDL3 packages.
+IMPORTANT! For SDL3 in particular, not all libraries have been updated to an official 3.0 release. As a result, packages lika SDL_mixer and SDL_net need to be built from source to be compatible with SDL3.  
 
 ### SDL3 on Ubuntu Linux
 
@@ -97,14 +97,14 @@ This will install _sdl3_ into the standard library on your distribution.
 
 On mac with _homebrew_ installed please use the following command in terminal to install the libraries:
 
-    $ brew install sdl3 sdl2_mixer sdl3_image sdl3_ttf sdl2_net
+    $ brew install sdl3 sdl3_image sdl3_ttf
 
 
 ### SDL3 on Windows
 
 On widows with Msys2, please open the msys2 console and issue the following commands to install the SDL2 libraries.
 
-    $ pacman -S mingw64/mingw-w64-x86_64-SDL3 mingw64/mingw-w64-x86_64-SDL3-image mingw64/mingw-w64-x86_64-SDL3-ttf mingw64/mingw-w64-x86_64-SDL2_mixer mingw64/mingw-w64-x86_64-SDL2_net
+    $ pacman -S mingw64/mingw-w64-x86_64-SDL3 mingw64/mingw-w64-x86_64-SDL3-image mingw64/mingw-w64-x86_64-SDL3-ttf
 
 Answer _Y_ to proceed with the installation.
 
@@ -112,9 +112,7 @@ Answer _Y_ to proceed with the installation.
 
 In order to run the hello program using Makefile, rename the right makefile for you system. For example, on a Windows computer, rename _Makefile\_win_ to _Makefile_. 
 
-Ensure the Makefile have the correct active lines of code for your version of SDL.
-
-Ensure you _make_ the correct _hello_ file for your version of SDL.
+Ensure the Makefile have the correct active lines of code for your version of SDL (2 or 3). 
 
 Open a terminal and point the working directory to the project folder. Refer to the [_c\_programming\_intro_](https://github.com/Makerspace-KTH/c_programing_intro#4-launch-and-run-a-c-program) for details for your operating system.
 
