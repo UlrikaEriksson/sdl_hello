@@ -12,7 +12,7 @@
   - [Running the sdl hello program](#running-the-sdl-hello-program)
   - [Bonus](#bonus)
 
-This is a simple tutorial to install and run a simple program which uses the _Simple Direct Media Library (SDL2)_ in a C program.
+This is a simple tutorial to install and run a simple program which uses the _Simple Direct Media Library (SDL)_ in a C program.
 
 This tutorial assumes that you have installed and are familiar with running a C program as shown in the tutorial [here](https://github.com/Makerspace-KTH/c_programing_intro)
 
@@ -52,8 +52,8 @@ Answer _Y_ to proceed with the installation.
 ## Installing SDL3 Libraries
 SDL contains various libraries based on what type of functions are called. For example, the _SDL2\_mixer_ library contains functions to manage sound when creating games, while _SDL2\_ttf_ library helps in creating fonts. The libraries are separated based on their functions but also to ensure that only the required parts of the libraries are used for building the executable. The size of the library will have a influence on the size of the executable cerated.
 
-IMPORTANT! 
-SDL3 is a very new release. As a result, for Ubuntu Linux all will be built from source, and for Windows and Mac libraries like SDL_mixer and SDL_net need to be built from source.
+_IMPORTANT!_  
+SDL3 is a very new release. As a result, for Ubuntu Linux all will be built from source, and for Windows and Mac libraries like SDL_mixer and SDL_net still need to be built from source.
 
 ### SDL3 on Ubuntu Linux
 
@@ -96,14 +96,14 @@ This will install _sdl3_ into the standard library on your distribution.
 
 ### SDL3 on Macos
 
-On mac with _homebrew_ installed please use the following command in terminal to install the libraries. SDL3_mixer and SDL3_net need to be built from source.
+On mac with _homebrew_ installed please use the following command in terminal to install the libraries. Other libraries like SDL3_mixer and SDL3_net still need to be built from source.
 
     $ brew install sdl3 sdl3_image sdl3_ttf
 
 
 ### SDL3 on Windows
 
-On windows with Msys2, please open the msys2 console and issue the following commands to install the libraries. SDL3_mixer and SDL3_net need to be built from source.
+On windows with Msys2, please open the msys2 console and issue the following commands to install the libraries. Other libraries like SDL3_mixer and SDL3_net still need to be built from source.
 
     $ pacman -S mingw64/mingw-w64-x86_64-SDL3 mingw64/mingw-w64-x86_64-SDL3-image mingw64/mingw-w64-x86_64-SDL3-ttf
 
