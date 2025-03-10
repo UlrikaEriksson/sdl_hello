@@ -96,14 +96,14 @@ This will install _sdl3_ into the standard library on your distribution.
 
 ### SDL3 on Macos
 
-On mac with _homebrew_ installed please use the following command in terminal to install the libraries. Other libraries like SDL3_mixer and SDL3_net still need to be built from source.
+On mac with _homebrew_ installed please use the below command in terminal to install the libraries. Other libraries like SDL3_mixer and SDL3_net still need to be built from source.
 
     $ brew install sdl3 sdl3_image sdl3_ttf
 
 
 ### SDL3 on Windows
 
-On windows with Msys2, please open the msys2 console and issue the following commands to install the libraries. Other libraries like SDL3_mixer and SDL3_net still need to be built from source.
+On windows with Msys2, please open the msys2 console and issue the below commands to install the libraries. Other libraries like SDL3_mixer and SDL3_net still need to be built from source.
 
     $ pacman -S mingw64/mingw-w64-x86_64-SDL3 mingw64/mingw-w64-x86_64-SDL3-image mingw64/mingw-w64-x86_64-SDL3-ttf
 
